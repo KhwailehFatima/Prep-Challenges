@@ -24,6 +24,33 @@ const runningSumOfArray = (arr) => {
 // -------------------------------------------------------------------------------------------------------
 
 // -------------------------------------------------------------------------------------------------------
+ 
+//  Challenge 2:
+//  Required:
+// Write a function that takes two arrays of integers (nums and index) and
+// returns a target array under the following rules:
+// Initially target array is empty.
+// From left to right read nums[i] and index[i], insert at index index[i] the
+// value nums[i] in target array.
+// Repeat the previous step until there are no elements to read in nums and index.
+
+//Example 1
+// Input: nums = [0, 1, 2, 3, 4], index = [0, 4, 1, 2, 3]
+// Output: [0,4,1,2,3]
+
+//Example 2
+// Input: nums = [1, 2, 3, 4, 0], index = [0, 1, 2, 3, 0]
+// Output: [1, 2, 3, 4, 1]
+
+const targetArrayInGivenOrder = (numsArr, indexArr) => {
+  let targetArr = [];
+  for (let i = 0; i < indexArr.length; i++) {
+    targetArr[i] = numsArr[indexArr[i]]
+  }
+
+  console.log(targetArr);
+  return targetArr;
+
 // Challenge 02:
 // Required:
 //
@@ -49,6 +76,7 @@ const removeElementFromArray = (arr, value) => {
     }
   }
   return arr2;
+
 };
 // -------------------------------------------------------------------------------------------------------
 
@@ -64,6 +92,15 @@ const removeElementFromArray = (arr, value) => {
 // [89, 41, 31, 111, 31]
 //
 
+ 
+const arrInc = (arr) => {
+  
+  let result = [];
+  
+  for (let i = 0; i < arr.length; i++)
+  result.push(arr[i] + 10)
+  return result;
+  
 const oddFiltration = (arr) => {
   let arr2=[]
 for (let i=0; i<arr.length; i++){
@@ -72,7 +109,7 @@ for (let i=0; i<arr.length; i++){
   }
 }
 return arr2
-};
+ };
 // -------------------------------------------------------------------------------------------------------
 
 module.exports = { runningSumOfArray, removeElementFromArray, oddFiltration };
