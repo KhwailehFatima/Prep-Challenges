@@ -97,11 +97,13 @@ const cvFormatter = (arr) => {
 //Example 2
 // Input: nums = [1, 2, 3, 4, 0], index = [0, 1, 2, 3, 0]
 // Output: [1, 2, 3, 4, 1]
+
 const targetArrayInGivenOrder = (numsArr, indexArr) => {
   let targetArr = [];
   for (let i = 0; i < indexArr.length; i++) {
     targetArr[i] = numsArr[indexArr[i]]
   }
+
   console.log(targetArr);
   return targetArr;
 };
@@ -120,7 +122,9 @@ const targetArrayInGivenOrder = (numsArr, indexArr) => {
 //
 
 const arrInc = (arr) => {
+  
   let result = [];
+  
   for (let i = 0; i < arr.length; i++)
   result.push(arr[i] + 10)
   return result;
